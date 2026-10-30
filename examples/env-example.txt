@@ -1,0 +1,20 @@
+# Generic reference example only. Replace every endpoint and value with your
+# deployment's configuration. Do not commit real SCIM tokens.
+
+# Use the full SCIM API base URL, including its version path.
+export SCIM_DEV_URL='https://scim-dev.example.com/api/v1/scim/v2'
+export SCIM_PROD_URL='https://scim.example.com/api/v1/scim/v2'
+
+# Select the target endpoint above:
+export APP_ENV=dev
+# For production, use this instead:
+# export APP_ENV=prod
+
+# Set your SCIM token in a private environment:
+export SCIM_TOKEN='REPLACE_WITH_YOUR_SCIM_TOKEN'
+
+# Optional. Required only when commands/import rows use usernames without @.
+export SCIM_EMAIL_DOMAIN='example.com'
+
+# Optional per-command timeout override (default: 30 seconds):
+python3 owui_scim_admin.py --timeout 30 list-users

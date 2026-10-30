@@ -2,7 +2,7 @@
 
 Developed by Nathan I Keiter, Gettysburg College.
 
-`owui_scim_admin.py` is a command-line utility for administering Open WebUI
+`owui_scim_admin.py` is a command-line utility for administering [Open WebUI](https://github.com/open-webui/open-webui)
 users and groups through its SCIM 2.0 API. It supports listing, retrieving,
 creating, updating, and deleting users and groups; exporting list results; and
 bulk-importing group memberships from a CSV file.
@@ -208,8 +208,7 @@ a generic reference for setting `APP_ENV` and `SCIM_TOKEN` and optionally
 setting the DEV/PROD endpoint URLs and `SCIM_EMAIL_DOMAIN`. Adapt its values
 to your environment and set them in your shell or deployment environment
 before running the script; the script does not automatically load the text
-file. For Gettysburg College's environment-specific values, see
-[`docs/env-example.txt`](docs/env-example.txt).
+file.
 
 ### Discover required SCIM fields
 
@@ -239,6 +238,21 @@ This tool can create, modify, and delete accounts and groups. Use a
 least-privilege SCIM token, confirm `APP_ENV` before running mutations, and
 avoid sharing exported user data or token values. The script does not include
 a dry-run mode for CRUD commands or CSV imports.
+
+## Related work
+
+This is a stand-alone project and does not depend on the other projects below.
+It is built for [Open WebUI](https://github.com/open-webui/open-webui); thank
+you to its authors and contributors.
+
+### Other related work by this author
+
+- [owui-token-usage-tracking-plugin](https://github.com/nkeiter/owui-token-usage-tracking-plugin):
+  Open WebUI filter plugin that tracks and limits token usage by tier.
+- [owui-token-usage-admin](https://github.com/nkeiter/owui-token-usage-admin):
+  command-line tool for managing token usage tiers and limits.
+- [owui-token-usage-management-console](https://github.com/nkeiter/owui-token-usage-management-console):
+  graphical (web) version of the token usage admin CLI.
 
 ## Disclaimer
 
